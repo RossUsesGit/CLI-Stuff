@@ -4,8 +4,9 @@ class CoinToss():
 
     def __init__(self):
 
-        self.comp_choice = None
-        self.face = None
+        self.comp_face = None
+        self.user_face = None
+        self.result = None
         
     def play(self):
         
@@ -15,6 +16,12 @@ class CoinToss():
         else:
             self.face = "Tails"
 
-        return self.face
+        if self.comp_face == self.user_face:
+            self.result = "Win"
+        else: 
+            self.result = "Lose"
+
+        print(f"You {self.result}! ")
+
 
         
